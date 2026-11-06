@@ -1,7 +1,8 @@
 # Custom Cruisers East Africa Ltd — Website
 
-A single-page, responsive landing and service website. Plain HTML, CSS and
-vanilla JavaScript — no build step, ready for GitHub Pages.
+A single-page, responsive landing and service website in a "technical
+blueprint" style (cream grid paper, ink navy, signal orange, mono labels).
+Plain HTML, CSS and vanilla JavaScript — no build step, ready for GitHub Pages.
 
 ## Structure
 
@@ -22,13 +23,13 @@ All paths are relative (`./assets/...`), so the site works at
 
 | What | Where | Notes |
 |------|-------|-------|
-| Logo | `assets/img/logo.jpg` | Drop in an SVG/PNG and update the two `<img class="brand-logo">` tags in `index.html` (header + footer). A transparent-background PNG/SVG looks best. |
-| Hero photo | `assets/css/style.css` → `.hero-media` | Replace the CSS pattern with `background: url("../img/hero.jpg") center/cover;` (keep the `::after` overlay for text contrast). |
-| Workshop photo | `index.html` → `#workshop` section | Swap the `.media-placeholder` block for a real `<img>` (1200×900 recommended). |
-| Contact details | `index.html` → `#contact` section + footer | Phone, email and addresses are placeholders — search for `+254 700 000 000` and `customcruisers.example`. |
+| Logo | `assets/img/logo.jpg` | Drop in an SVG/PNG and update the two `<img class="brand-logo">` tags in `index.html` (header + footer). A transparent-background PNG/SVG looks best on the cream header. |
+| Hero schematic | `index.html` → `.hero-schematic` | The blueprint vehicle drawing is inline SVG — replace the whole `<figure>` with a photo if you prefer. |
+| Workshop media | `index.html` → `#workshop` section | Swap the `.dark-media` placeholder for a real `<img>` or embedded video. |
+| Contact details | `index.html` → `#locations` cards + footer | Addresses and phone numbers are placeholders — search for `+254 700 000 000`. |
 | Social links | `index.html` footer | Point the three `href="#"` links at your real profiles. |
-| Brand colors | `assets/css/style.css` → `:root` | `--primary` (blue) and `--accent-red` were sampled from the logo. |
-| Stats | `index.html` → `.stats-bar` | Edit the `data-count` numbers and labels. |
+| Brand colors | `assets/css/style.css` → `:root` | `--orange` is the accent; `--paper`/`--ink`/`--navy` set the blueprint palette. |
+| Stats | `index.html` → `.proof-stats` | Edit the `data-count` / `data-suffix` numbers and labels. |
 
 ## Making the contact form live
 

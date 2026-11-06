@@ -1,6 +1,6 @@
 /* Custom Cruisers East Africa — site behaviour
-   Vanilla JS: mobile nav, sticky header state, stat counters,
-   scroll reveals, active-link highlighting, form validation. */
+   Vanilla JS: overlay menu, sticky header state, stat counters,
+   scroll reveals, form validation. */
 
 (function () {
   "use strict";
@@ -15,33 +15,34 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
-  /* ---------- Mobile nav ---------- */
-  var toggle = document.getElementById("nav-toggle");
-  var nav = document.getElementById("site-nav");
+  /* ---------- Overlay menu ---------- */
+  var menuBtn = document.getElementById("menu-btn");
+  var overlay = document.getElementById("menu-overlay");
 
-  toggle.addEventListener("click", function () {
-    var open = nav.classList.toggle("is-open");
-    toggle.setAttribute("aria-expanded", String(open));
+  function setMenu(open) {
+    overlay.classList.toggle("is-open", open);
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  menuBtn.addEventListener("click", function () {
+    setMenu(!overlay.classList.contains("is-open"));
   });
 
-  nav.addEventListener("click", function (e) {
-    if (e.target.tagName === "A") {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-    }
+  overlay.addEventListener("click", function (e) {
+    if (e.target.closest("a") || e.target === overlay) setMenu(false);
   });
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && nav.classList.contains("is-open")) {
-      nav.classList.remove("is-open");
-      toggle.setAttribute("aria-expanded", "false");
-      toggle.focus();
+    if (e.key === "Escape" && overlay.classList.contains("is-open")) {
+      setMenu(false);
+      menuBtn.focus();
     }
   });
 
   /* ---------- Scroll reveals ---------- */
   var revealTargets = document.querySelectorAll(
-    ".service-card, .testimonial-card, .location-card, .section-head, .workshop-copy, .workshop-media, .contact-copy, .quote-form"
+    ".bp-hero .container > *, .service-row, .related-row, .location-card, .model-col, .section-tag, .bp-grid-section h2, .bp-dark h2, .request-form"
   );
   revealTargets.forEach(function (el) { el.classList.add("reveal"); });
 
@@ -54,28 +55,35 @@
           revealObserver.unobserve(el);
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     revealTargets.forEach(function (el) { revealObserver.observe(el); });
   } else {
     revealTargets.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
   /* ---------- Animated stat counters ---------- */
-  var stats = document.querySelectorAll(".stat-value[data-count]");
+  var stats = document.querySelectorAll(".proof-value[data-count]");
 
   function animateCount(el) {
     var target = parseInt(el.getAttribute("data-count"), 10);
-    if (prefersReducedMotion) { el.textContent = target; return; }
+    var suffix = el.getAttribute("data-suffix") || "";
+    if (prefersReducedMotion) { el.textContent = target + suffix; return; }
     var duration = 900;
     var start = null;
+    var finished = false;
     function step(ts) {
       if (!start) start = ts;
       var progress = Math.min((ts - start) / duration, 1);
       var eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
+      el.textContent = Math.round(eased * target) + (progress === 1 ? suffix : "");
       if (progress < 1) requestAnimationFrame(step);
+      else finished = true;
     }
     requestAnimationFrame(step);
+    /* rAF is suspended in hidden tabs — guarantee the final value */
+    setTimeout(function () {
+      if (!finished) el.textContent = target + suffix;
+    }, duration + 300);
   }
 
   if ("IntersectionObserver" in window) {
@@ -92,27 +100,7 @@
     stats.forEach(animateCount);
   }
 
-  /* ---------- Active nav link while scrolling ---------- */
-  var sections = document.querySelectorAll("main section[id]");
-  var navLinks = document.querySelectorAll(".site-nav a");
-
-  if ("IntersectionObserver" in window) {
-    var sectionObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          navLinks.forEach(function (link) {
-            link.classList.toggle(
-              "is-active",
-              link.getAttribute("href") === "#" + entry.target.id
-            );
-          });
-        }
-      });
-    }, { rootMargin: "-40% 0px -55% 0px" });
-    sections.forEach(function (s) { sectionObserver.observe(s); });
-  }
-
-  /* ---------- Quote form validation ---------- */
+  /* ---------- Request form validation ---------- */
   var form = document.getElementById("quote-form");
   var status = document.getElementById("form-status");
 
@@ -142,11 +130,10 @@
     var firstInvalid = null;
 
     fields.forEach(function (field) {
-      if (!validateField(field) && !firstInvalid) {
-        firstInvalid = field;
+      var ok = validateField(field);
+      if (!ok) {
         allValid = false;
-      } else if (field.closest(".form-field").classList.contains("has-error")) {
-        allValid = false;
+        if (!firstInvalid) firstInvalid = field;
       }
     });
 
@@ -163,7 +150,7 @@
          headers: { Accept: "application/json" }
        }).then(...) — see README.md */
     status.textContent =
-      "Thank you — your request has been noted. (Demo form: connect a form backend to receive submissions.)";
+      "REQUEST LOGGED — the workshop team will confirm your appointment. (Demo form: connect a backend to receive submissions.)";
     form.reset();
   });
 

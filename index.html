@@ -3,422 +3,501 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Custom Cruisers East Africa Ltd — 4x4 Builds, Conversions &amp; Service</title>
-  <meta name="description" content="Custom Cruisers East Africa Ltd builds, converts and maintains Land Cruisers and 4x4s for safari, fleet and private clients across East Africa. Book a service or request a build quote.">
+  <title>Custom Cruisers East Africa Ltd — Land Cruiser &amp; 4x4 Builds</title>
+  <meta name="description" content="Custom Cruisers East Africa Ltd builds, converts and maintains Land Cruisers and 4x4s for safari, fleet and private clients. Workshops in Nairobi, Mombasa and Arusha.">
 
   <link rel="icon" href="./assets/img/logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 
-  <!-- ============================================================
-       HEADER
-       ============================================================ -->
+  <!-- ================= HEADER ================= -->
   <header class="site-header" id="top">
-    <div class="container header-inner">
+    <div class="header-inner">
       <a class="brand" href="#top" aria-label="Custom Cruisers East Africa — home">
-        <!-- BRAND ASSET: replace ./assets/img/logo.jpg with your SVG/PNG logo -->
+        <!-- BRAND ASSET: replace ./assets/img/logo.jpg with your logo -->
         <img src="./assets/img/logo.jpg" alt="Custom Cruisers East Africa Ltd" class="brand-logo">
       </a>
-
-      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-        <a href="#services">Services</a>
-        <a href="#workshop">Workshop</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#coverage">Coverage</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="header-actions">
-        <a class="btn btn-primary" href="#contact">Book a Service</a>
-        <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu-overlay" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main>
+  <!-- Full-screen menu overlay -->
+  <nav class="menu-overlay" id="menu-overlay" aria-label="Main navigation">
+    <div class="menu-inner">
+      <p class="menu-label">INDEX</p>
+      <a href="#services"><span>01</span>Service architecture</a>
+      <a href="#workshop"><span>02</span>The workshop</a>
+      <a href="#models"><span>03</span>Vehicle scope</a>
+      <a href="#locations"><span>04</span>Workshops &amp; intake</a>
+      <a href="#request"><span>05</span>Start here</a>
+    </div>
+  </nav>
 
-    <!-- ============================================================
-         HERO
-         ============================================================ -->
-    <section class="hero">
-      <div class="hero-media" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <p class="eyebrow">Nairobi · Mombasa · Arusha</p>
-        <h1>Built for East African roads.<br>And everything beyond them.</h1>
-        <p class="hero-lead">
-          We build, convert and maintain Land Cruisers and 4x4s for safari operators,
-          NGOs, fleets and private owners — from pop-top game-drive conversions to
-          full suspension and drivetrain rebuilds.
+  <!-- Floating CTA pill -->
+  <a class="float-cta" href="#request">Request Service <span aria-hidden="true">&#8599;</span></a>
+
+  <main class="blueprint">
+
+    <!-- ================= 01 / HERO ================= -->
+    <section class="bp-hero bp-grid-section">
+      <div class="container">
+        <p class="coords">
+          <span>1.3167&deg; S / 36.8500&deg; E</span>
+          <span class="coords-line" aria-hidden="true"></span>
+          <span>4.0435&deg; S / 39.6682&deg; E</span>
+          <span class="coords-line" aria-hidden="true"></span>
+          <span>3.3869&deg; S / 36.6830&deg; E</span>
         </p>
+
+        <p class="section-tag"><span class="tag-num">01</span> LAND CRUISER &amp; 4X4 SPECIALISTS</p>
+
+        <h1>Builds, engineered<br>for the real East Africa.</h1>
+
+        <p class="lead">
+          Safari conversions, suspension, fabrication, auto-electrical and full
+          mechanical service for Land Cruisers and 4x4s — for tour operators,
+          NGOs, fleets and private owners. Three workshops: Nairobi, Mombasa
+          and Arusha.
+        </p>
+
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="#contact">Request a Quote</a>
-          <a class="btn btn-outline btn-lg" href="#services">See Our Services</a>
+          <a class="pill pill-solid" href="#request">Schedule an Appointment</a>
+          <a class="pill pill-ghost" href="#services">Explore the System <span aria-hidden="true">&#8595;</span></a>
         </div>
-      </div>
 
-      <div class="container">
-        <div class="stats-bar" role="list">
-          <div class="stat" role="listitem">
-            <span class="stat-value" data-count="850">0</span>
-            <span class="stat-label">Vehicles converted</span>
+        <!-- Blueprint vehicle schematic -->
+        <figure class="hero-schematic" aria-hidden="true">
+          <svg viewBox="0 0 900 300" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- dimension lines -->
+            <line x1="120" y1="282" x2="780" y2="282" stroke="#b9b2a4" stroke-width="1"/>
+            <line x1="120" y1="276" x2="120" y2="288" stroke="#b9b2a4" stroke-width="1"/>
+            <line x1="780" y1="276" x2="780" y2="288" stroke="#b9b2a4" stroke-width="1"/>
+            <text x="450" y="296" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#8a8578">WHEELBASE / LONG-RANGE SPEC</text>
+            <!-- snorkel -->
+            <path d="M676 60 v70" stroke="#18202a" stroke-width="2"/>
+            <path d="M668 60 h16 v14 h-16 z" stroke="#18202a" stroke-width="2"/>
+            <!-- roof rack -->
+            <line x1="305" y1="52" x2="640" y2="52" stroke="#18202a" stroke-width="2"/>
+            <line x1="330" y1="52" x2="330" y2="66" stroke="#18202a" stroke-width="2"/>
+            <line x1="470" y1="52" x2="470" y2="66" stroke="#18202a" stroke-width="2"/>
+            <line x1="612" y1="52" x2="612" y2="66" stroke="#18202a" stroke-width="2"/>
+            <!-- body -->
+            <path d="M150 196 h40 l18 -58 q4 -12 16 -12 h70 l22 -56 q4 -8 13 -8 h282 q10 0 12 10 l12 54 h88 q14 0 18 14 l12 44 q2 12 -8 12 h-26"
+              stroke="#18202a" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M150 196 v-30 q0 -8 8 -8 h30" stroke="#18202a" stroke-width="2.5"/>
+            <!-- windows -->
+            <path d="M332 70 l-18 48 h96 v-48 z" stroke="#18202a" stroke-width="2"/>
+            <path d="M428 70 v48 h108 v-48 z" stroke="#18202a" stroke-width="2"/>
+            <path d="M554 70 v48 h66 l-10 -48 z" stroke="#18202a" stroke-width="2"/>
+            <!-- bottom sill -->
+            <path d="M262 196 h380" stroke="#18202a" stroke-width="2.5"/>
+            <path d="M716 196 h40" stroke="#18202a" stroke-width="2.5"/>
+            <!-- bull bar -->
+            <path d="M756 196 v-52 q0 -6 6 -6 h18 v58" stroke="#18202a" stroke-width="2.5"/>
+            <!-- wheels -->
+            <circle cx="262" cy="206" r="44" stroke="#18202a" stroke-width="2.5"/>
+            <circle cx="262" cy="206" r="26" stroke="#18202a" stroke-width="2"/>
+            <circle cx="262" cy="206" r="4" fill="#fc5017"/>
+            <circle cx="668" cy="206" r="44" stroke="#18202a" stroke-width="2.5"/>
+            <circle cx="668" cy="206" r="26" stroke="#18202a" stroke-width="2"/>
+            <circle cx="668" cy="206" r="4" fill="#fc5017"/>
+            <!-- callouts -->
+            <line x1="262" y1="150" x2="262" y2="120" stroke="#fc5017" stroke-width="1"/>
+            <circle cx="262" cy="118" r="2.5" fill="#fc5017"/>
+            <text x="252" y="110" text-anchor="end" font-family="JetBrains Mono, monospace" font-size="10" fill="#b83209">SUSPENSION / OME</text>
+            <line x1="690" y1="74" x2="730" y2="44" stroke="#fc5017" stroke-width="1"/>
+            <circle cx="732" cy="42" r="2.5" fill="#fc5017"/>
+            <text x="740" y="40" font-family="JetBrains Mono, monospace" font-size="10" fill="#b83209">SNORKEL / RAISED INTAKE</text>
+            <line x1="470" y1="52" x2="470" y2="26" stroke="#fc5017" stroke-width="1"/>
+            <circle cx="470" cy="24" r="2.5" fill="#fc5017"/>
+            <text x="480" y="20" font-family="JetBrains Mono, monospace" font-size="10" fill="#b83209">ROOF SYSTEM / POP-TOP READY</text>
+          </svg>
+          <figcaption class="schematic-labels" aria-hidden="true">
+            <span>SYSTEMS</span><span>DRIVELINE</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ================= PROOF STRIP ================= -->
+    <section class="bp-proof">
+      <div class="container proof-grid">
+        <div class="proof-stats" role="list">
+          <div class="proof-stat" role="listitem">
+            <span class="proof-index">01</span>
+            <span class="proof-value" data-count="850" data-suffix="+">0</span>
+            <span class="proof-label">VEHICLES CONVERTED</span>
           </div>
-          <div class="stat" role="listitem">
-            <span class="stat-value" data-count="18">0</span>
-            <span class="stat-label">Years in operation</span>
+          <div class="proof-stat" role="listitem">
+            <span class="proof-index">02</span>
+            <span class="proof-value" data-count="18">0</span>
+            <span class="proof-label">YEARS IN OPERATION</span>
           </div>
-          <div class="stat" role="listitem">
-            <span class="stat-value" data-count="60">0</span>
-            <span class="stat-label">Fleet clients served</span>
+          <div class="proof-stat" role="listitem">
+            <span class="proof-index">03</span>
+            <span class="proof-value" data-count="60" data-suffix="+">0</span>
+            <span class="proof-label">FLEET CLIENTS SERVED</span>
           </div>
-          <div class="stat" role="listitem">
-            <span class="stat-value" data-count="3">0</span>
-            <span class="stat-label">Workshop locations</span>
+          <div class="proof-stat" role="listitem">
+            <span class="proof-index">04</span>
+            <span class="proof-value" data-count="3">0</span>
+            <span class="proof-label">WORKSHOP LOCATIONS</span>
           </div>
+        </div>
+        <div class="proof-side">
+          <span>SECTION / 02</span>
+          <span>REAL WORKSHOP PROOF</span>
+          <span>NAIROBI / BAY 07</span>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         SERVICES
-         ============================================================ -->
-    <section class="section" id="services">
+    <!-- ================= 02 / INTRO ================= -->
+    <section class="bp-intro bp-grid-section" id="intro">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">What we do</p>
-          <h2>One workshop for the whole build</h2>
-          <p class="section-lead">
-            From a routine service to a ground-up safari conversion, every job is
-            handled in-house by our own fabricators, mechanics and auto-electricians.
-          </p>
-        </div>
+        <p class="section-tag"><span class="tag-num">02</span> ASSESS BEFORE WE BUILD</p>
+        <h2>Assessment first.<br>Steel second.</h2>
+        <p class="lead">
+          Most workshops quote before they measure. Our team inspects the
+          vehicle, explains what it actually needs, and gives you a fixed
+          written quote before any work begins.
+        </p>
+        <ul class="rule-list">
+          <li>APPOINTMENTS PROTECT BAY AND FABRICATOR TIME</li>
+          <li>ASSESSMENT IS COMPLETED BEFORE BUILD ESTIMATES</li>
+          <li>WRITTEN APPROVAL BEFORE MAJOR WORK BEGINS</li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="services-grid">
-          <article class="service-card service-card-wide">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h2l1.5-4.5h11L19 17h2"/><path d="M6.5 12.5 8 7h8l1.5 5.5"/><circle cx="7.5" cy="17" r="1.8"/><circle cx="16.5" cy="17" r="1.8"/><path d="M8 7V4h8v3"/></svg>
-            </div>
-            <h3>Safari &amp; Game-Drive Conversions</h3>
-            <p>
-              Pop-top and open-sided conversions for tour operators: reinforced roll
-              cages, canvas work, seating for up to nine passengers, roof hatches,
-              fridge slides and long-range fuel tanks — built to park-compliance specs.
-            </p>
-            <a class="text-link" href="#contact">Discuss a conversion</a>
-          </article>
+    <!-- ================= 03 / SERVICES ================= -->
+    <section class="bp-services bp-grid-section" id="services">
+      <div class="container">
+        <p class="section-tag"><span class="tag-num">03</span> SERVICE ARCHITECTURE</p>
+        <h2>Six systems.<br>One standard.</h2>
+        <p class="lead">Built around the work East African 4x4 owners actually need.</p>
 
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4"/><path d="M12 17v4"/><path d="M5 12H3"/><path d="M21 12h-2"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg>
-            </div>
-            <h3>Suspension &amp; Lift Kits</h3>
-            <p>
-              Old Man Emu, Ironman and Tough Dog setups matched to your load and
-              terrain — corrugation-ready, fitted and corner-weighted in our workshop.
-            </p>
-            <a class="text-link" href="#contact">Get a setup quote</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6 6L4 17l3 3 4.7-4.7a4.5 4.5 0 0 0 6-6L15 12l-3-3 2.7-2.7z"/></svg>
-            </div>
-            <h3>Mechanical Service &amp; Repair</h3>
-            <p>
-              Scheduled servicing, engine and gearbox rebuilds, diffs and transfer
-              cases — with genuine or OEM-equivalent parts and a written warranty.
-            </p>
-            <a class="text-link" href="#contact">Book a service</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8z"/></svg>
-            </div>
-            <h3>Auto-Electrical &amp; Dual Battery</h3>
-            <p>
-              Dual-battery systems, solar integration, camp lighting, winch wiring,
-              trackers and full harness diagnostics by in-house auto-electricians.
-            </p>
-            <a class="text-link" href="#contact">Plan your system</a>
-          </article>
-
-          <article class="service-card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 12h18"/></svg>
-            </div>
-            <h3>Fabrication &amp; Accessories</h3>
-            <p>
-              Bull bars, rock sliders, roof racks, drawer systems and custom brackets
-              — designed, cut and welded on site, then powder-coated to spec.
-            </p>
-            <a class="text-link" href="#contact">Request fabrication</a>
-          </article>
-
-          <article class="service-card service-card-wide">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>
-            </div>
-            <h3>Fleet Builds &amp; Maintenance Contracts</h3>
-            <p>
-              Standardised builds and scheduled maintenance for NGO, mining and tour
-              fleets: fixed per-vehicle pricing, service history reporting, priority
-              workshop slots and field support between Nairobi, Mombasa and Arusha.
-            </p>
-            <a class="text-link" href="#contact">Talk to our fleet team</a>
-          </article>
+        <div class="service-list">
+          <a class="service-row" href="#request">
+            <span class="service-num">01</span>
+            <span class="service-body">
+              <strong>Safari &amp; game-drive conversions</strong>
+              <span>Pop-top and open-sided conversions: roll cages, canvas, seating, roof hatches, fridge slides and long-range tanks — built to park-compliance specs.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="service-row" href="#request">
+            <span class="service-num">02</span>
+            <span class="service-body">
+              <strong>Suspension &amp; lift kits</strong>
+              <span>Old Man Emu, Ironman and Tough Dog setups matched to your load and terrain — corrugation-ready, fitted and corner-weighted in-house.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="service-row" href="#request">
+            <span class="service-num">03</span>
+            <span class="service-body">
+              <strong>Mechanical service &amp; repair</strong>
+              <span>Scheduled servicing, engine and gearbox rebuilds, diffs and transfer cases — genuine or OEM-equivalent parts with a written warranty.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="service-row" href="#request">
+            <span class="service-num">04</span>
+            <span class="service-body">
+              <strong>Auto-electrical &amp; dual battery</strong>
+              <span>Dual-battery systems, solar integration, camp lighting, winch wiring, trackers and full harness diagnostics.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="service-row" href="#request">
+            <span class="service-num">05</span>
+            <span class="service-body">
+              <strong>Fabrication &amp; accessories</strong>
+              <span>Bull bars, rock sliders, roof racks, drawer systems and custom brackets — designed, cut and welded on site, powder-coated to spec.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="service-row" href="#request">
+            <span class="service-num">06</span>
+            <span class="service-body">
+              <strong>Fleet builds &amp; maintenance contracts</strong>
+              <span>Standardised builds and scheduled maintenance for NGO, mining and tour fleets: fixed per-vehicle pricing and priority workshop slots.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         WORKSHOP / WHY US
-         ============================================================ -->
-    <section class="section section-alt" id="workshop">
-      <div class="container workshop-grid">
-        <div class="workshop-copy">
-          <p class="eyebrow">The workshop</p>
-          <h2>Everything under one roof in Industrial Area, Nairobi</h2>
+    <!-- ================= DARK / WORKSHOP PROOF ================= -->
+    <section class="bp-dark" id="workshop">
+      <div class="container">
+        <p class="section-tag section-tag-light"><span class="tag-live">LIVE</span> REAL BAYS. REAL FABRICATORS.</p>
+        <h2>The diagram is precise.<br>The workshop is real.</h2>
+        <p class="lead lead-light">
+          Twelve service bays, a dedicated fabrication shop, a paint and
+          powder-coat line and a diagnostics lane in Industrial Area, Nairobi —
+          so your vehicle is never trucked between subcontractors mid-build.
+        </p>
+        <!-- BRAND ASSET: replace this placeholder with workshop photo/video -->
+        <div class="dark-media" role="img" aria-label="Placeholder for workshop footage">
+          <span>WORKSHOP FOOTAGE / BUILD RECORD</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= READING ================= -->
+    <section class="bp-reading">
+      <div class="container reading-grid">
+        <div>
+          <h3>Independent workshops have a specific role</h3>
           <p>
-            Our main facility runs twelve service bays, a dedicated fabrication shop,
-            a paint and powder-coat line and a diagnostics lane — so your vehicle is
-            never trucked between subcontractors mid-build.
+            Dealer service remains the right path for eligible warranty work and
+            recalls. Custom Cruisers is built for owners who need out-of-warranty
+            maintenance, a conversion the dealer won't touch, a second opinion,
+            or a clear technical explanation before approving major work.
           </p>
-          <ul class="check-list">
-            <li>Genuine and OEM-equivalent parts, sourced and warehoused in-house</li>
-            <li>Fixed written quotes before work begins — no surprise line items</li>
-            <li>Photo updates at every build milestone, on WhatsApp or email</li>
-            <li>Six-month workshop warranty on labour and fitted parts</li>
-            <li>KEBS-compliant conversions with inspection paperwork handled for you</li>
-          </ul>
-          <a class="btn btn-outline" href="#contact">Arrange a workshop visit</a>
+          <p>
+            A rattle on corrugations is the beginning of the investigation.
+            Suspension, bushings, body mounts, drivetrain and electrical systems
+            can produce overlapping symptoms — the vehicle is assessed before a
+            responsible estimate can exist.
+          </p>
         </div>
-        <div class="workshop-media" role="img" aria-label="Placeholder for a photo of the Custom Cruisers workshop floor">
-          <!-- BRAND ASSET: replace this block with <img src="./assets/img/workshop.jpg" alt="..."> -->
-          <div class="media-placeholder">
-            <span>Workshop photo<br>1200 × 900 — assets/img/workshop.jpg</span>
+        <div>
+          <h3>What the six service systems cover</h3>
+          <p>
+            Conversions cover park-compliant safari and game-drive builds.
+            Suspension, mechanical and electrical cover everything from routine
+            service to full rebuilds. Fabrication covers the steel: bars,
+            sliders, racks and one-off brackets. Fleet contracts put all of it
+            on a fixed per-vehicle schedule.
+          </p>
+          <div class="intake-rule">
+            <span class="intake-label">INTAKE RULE / 01</span>
+            <p>
+              Appointments are required. Assessment comes first because the
+              recommendation is based on inspection rather than a guess. The
+              workshop obtains written approval before major work begins.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         TESTIMONIALS
-         ============================================================ -->
-    <section class="section" id="testimonials">
+    <!-- ================= MODELS ================= -->
+    <section class="bp-models bp-grid-section" id="models">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Client reviews</p>
-          <h2>Trusted by the people who drive the hardest roads</h2>
-        </div>
-
-        <div class="testimonial-grid">
-          <figure class="testimonial-card">
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
-            <blockquote>
-              They converted six 79-Series cruisers for our Mara camps. Every one came
-              back on the promised date, and two seasons in we haven't had a single
-              structural issue with the pop-tops.
-            </blockquote>
-            <figcaption>
-              <strong>James Mwangi</strong>
-              <span>Operations Director, safari operator — Nairobi</span>
-            </figcaption>
-          </figure>
-
-          <figure class="testimonial-card">
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
-            <blockquote>
-              Our field fleet covers northern Kenya on terrible roads. Their maintenance
-              contract cut our vehicle downtime roughly in half, and the service
-              reporting makes donor audits painless.
-            </blockquote>
-            <figcaption>
-              <strong>Amina Hassan</strong>
-              <span>Logistics Manager, humanitarian NGO</span>
-            </figcaption>
-          </figure>
-
-          <figure class="testimonial-card">
-            <div class="stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★</div>
-            <blockquote>
-              Brought in my 105 for suspension and a drawer system before a Tanzania
-              crossing. The build advice was honest — they talked me out of parts I
-              didn't need. The truck handled perfectly, fully loaded.
-            </blockquote>
-            <figcaption>
-              <strong>Daniel Otieno</strong>
-              <span>Private owner, overland traveller</span>
-            </figcaption>
-          </figure>
+        <p class="section-tag"><span class="tag-num">M</span> SUPPORTED VEHICLE SCOPE</p>
+        <h2>Toyota and beyond,<br>model by model.</h2>
+        <div class="models-grid">
+          <div class="model-col">
+            <span class="model-make">TOYOTA</span>
+            <p>Land Cruiser 70, 80, 100, 105, 200 and 300 Series, Prado, Hilux and Fortuner — the core of every safari and NGO fleet we build.</p>
+          </div>
+          <div class="model-col">
+            <span class="model-make">OTHER 4X4S</span>
+            <p>Nissan Patrol, Land Rover Defender, Mitsubishi Pajero and supported pickups within the workshop's fabrication and service scope.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         COVERAGE / LOCATIONS
-         ============================================================ -->
-    <section class="section section-alt" id="coverage">
+    <!-- ================= DARK / MANIFESTO ================= -->
+    <section class="bp-dark bp-manifesto">
       <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Where we work</p>
-          <h2>Three workshops, one standard</h2>
+        <p class="section-tag section-tag-light">DEALER SERVICE HAS ITS PLACE.</p>
+        <h2>We exist for the builds<br>that need an independent answer.</h2>
+        <div class="badge-row">
+          <span>SAFARI CONVERSION SPECIALISTS</span>
+          <span>KEBS-COMPLIANT BUILDS</span>
+          <span>FLEET &amp; NGO PARTNER</span>
         </div>
+      </div>
+    </section>
+
+    <!-- ================= 04 / LOCATIONS ================= -->
+    <section class="bp-locations bp-grid-section" id="locations">
+      <div class="container">
+        <p class="section-tag"><span class="tag-num">04</span> SERVICE INTAKE</p>
+        <h2>Choose the workshop.<br>Start with context.</h2>
+        <p class="lead">Your service request routes your vehicle and concern directly to the correct workshop team.</p>
+
         <div class="location-grid">
+          <!-- BRAND ASSET: replace placeholder addresses & phone numbers -->
           <article class="location-card">
-            <h3>Nairobi — Head Office</h3>
-            <p class="location-tag">Full builds · Fabrication · Fleet HQ</p>
-            <p>
-              Main workshop and fabrication facility. All conversions and major builds
-              are completed here.
-            </p>
-            <p class="location-detail">Enterprise Road, Industrial Area<br>Mon–Sat, 8:00–17:30</p>
+            <p class="loc-tag">HEAD OFFICE / 01</p>
+            <h3>Nairobi<span>KE</span></h3>
+            <p class="loc-addr">Enterprise Road, Industrial Area<br>Nairobi</p>
+            <p class="loc-phone"><a href="tel:+254700000000">+254 700 000 000</a></p>
+            <a class="loc-cta" href="#request">REQUEST WORK <span aria-hidden="true">&#8594;</span></a>
           </article>
           <article class="location-card">
-            <h3>Mombasa</h3>
-            <p class="location-tag">Service · Port-arrival fit-outs</p>
-            <p>
-              Servicing and accessory fitting, plus preparation of newly imported
-              vehicles straight from the port before delivery upcountry.
-            </p>
-            <p class="location-detail">Shimanzi Road, Mombasa<br>Mon–Sat, 8:00–17:00</p>
+            <p class="loc-tag">COAST / 02</p>
+            <h3>Mombasa<span>KE</span></h3>
+            <p class="loc-addr">Shimanzi Road<br>Mombasa</p>
+            <p class="loc-phone"><a href="tel:+254700000001">+254 700 000 001</a></p>
+            <a class="loc-cta" href="#request">REQUEST WORK <span aria-hidden="true">&#8594;</span></a>
           </article>
           <article class="location-card">
-            <h3>Arusha</h3>
-            <p class="location-tag">Service · Safari fleet support</p>
-            <p>
-              Scheduled maintenance and in-season support for Tanzanian safari fleets
-              operating the northern circuit.
-            </p>
-            <p class="location-detail">Nairobi Road, Arusha<br>Mon–Fri, 8:00–17:00</p>
+            <p class="loc-tag">NORTHERN CIRCUIT / 03</p>
+            <h3>Arusha<span>TZ</span></h3>
+            <p class="loc-addr">Nairobi Road<br>Arusha</p>
+            <p class="loc-phone"><a href="tel:+255700000000">+255 700 000 000</a></p>
+            <a class="loc-cta" href="#request">REQUEST WORK <span aria-hidden="true">&#8594;</span></a>
           </article>
+        </div>
+
+        <div class="reading-grid reading-sub">
+          <div>
+            <h3>Three workshops, not one regional phone queue</h3>
+            <p>
+              Nairobi performs all conversions and major builds. Mombasa handles
+              servicing, accessory fitting and port-arrival preparation. Arusha
+              supports Tanzanian safari fleets on the northern circuit. Each
+              workshop has its own phone number and intake.
+            </p>
+          </div>
+          <div>
+            <h3>Clear options after assessment</h3>
+            <p>
+              The outcome may be a build, a repair, monitoring, or a referral to
+              dealer service. Include the model, symptoms and prior history in
+              your request, and wait for the team to confirm the appointment.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ============================================================
-         CONTACT / QUOTE FORM
-         ============================================================ -->
-    <section class="section" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <p class="eyebrow">Get in touch</p>
-          <h2>Tell us about your vehicle</h2>
-          <p>
-            Send a few details and we'll come back within one working day with next
-            steps — usually a call to scope the job, then a fixed written quote.
-          </p>
-          <dl class="contact-details">
-            <!-- BRAND ASSET: replace these placeholder contact details -->
-            <div><dt>Phone / WhatsApp</dt><dd><a href="tel:+254700000000">+254 700 000 000</a></dd></div>
-            <div><dt>Email</dt><dd><a href="mailto:info@customcruisers.example">info@customcruisers.example</a></dd></div>
-            <div><dt>Head office</dt><dd>Enterprise Road, Industrial Area, Nairobi</dd></div>
-          </dl>
+    <!-- ================= RELATED ================= -->
+    <section class="bp-related">
+      <div class="container">
+        <p class="section-tag"><span class="tag-arrow" aria-hidden="true">&#8594;</span> RELATED RECORDS</p>
+        <h3 class="related-title">Continue the build path</h3>
+        <div class="related-list">
+          <a class="related-row" href="#request">
+            <span class="service-num">01</span>
+            <span class="service-body">
+              <strong>Prepare for a first visit</strong>
+              <span>Know what to send, bring, approve, and expect from an assess-first appointment.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="related-row" href="#services">
+            <span class="service-num">02</span>
+            <span class="service-body">
+              <strong>Independent workshop or dealer?</strong>
+              <span>Use warranty status, build scope, and the need for a second opinion to choose the right path.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
+          <a class="related-row" href="#workshop">
+            <span class="service-num">03</span>
+            <span class="service-body">
+              <strong>How the workshop developed</strong>
+              <span>Eighteen years from a single Nairobi bay to three workshops across two countries.</span>
+            </span>
+            <span class="service-arrow" aria-hidden="true">&#8599;</span>
+          </a>
         </div>
+      </div>
+    </section>
 
-        <form class="quote-form" id="quote-form" novalidate>
+    <!-- ================= 05 / CLOSING + REQUEST ================= -->
+    <section class="bp-closing" id="request">
+      <div class="container">
+        <p class="section-tag"><span class="tag-num">05</span> START HERE</p>
+        <h2>We assess first,<br>then give you clear options.</h2>
+        <p class="lead">Honest answers are guaranteed.</p>
+
+        <form class="request-form" id="quote-form" novalidate>
           <div class="form-row">
             <div class="form-field">
-              <label for="qf-name">Your name</label>
+              <label for="qf-name">YOUR NAME</label>
               <input id="qf-name" name="name" type="text" autocomplete="name" required>
               <p class="field-error" aria-live="polite"></p>
             </div>
             <div class="form-field">
-              <label for="qf-phone">Phone or WhatsApp</label>
+              <label for="qf-phone">PHONE / WHATSAPP</label>
               <input id="qf-phone" name="phone" type="tel" autocomplete="tel" required>
               <p class="field-error" aria-live="polite"></p>
             </div>
           </div>
-
-          <div class="form-field">
-            <label for="qf-email">Email</label>
-            <input id="qf-email" name="email" type="email" autocomplete="email" required>
-            <p class="field-error" aria-live="polite"></p>
-          </div>
-
           <div class="form-row">
             <div class="form-field">
-              <label for="qf-vehicle">Vehicle (make, model, year)</label>
-              <input id="qf-vehicle" name="vehicle" type="text" placeholder="e.g. Land Cruiser 79, 2021" required>
+              <label for="qf-email">EMAIL</label>
+              <input id="qf-email" name="email" type="email" autocomplete="email" required>
               <p class="field-error" aria-live="polite"></p>
             </div>
             <div class="form-field">
-              <label for="qf-service">Service needed</label>
-              <select id="qf-service" name="service" required>
-                <option value="" selected disabled>Select a service</option>
-                <option>Safari / game-drive conversion</option>
-                <option>Suspension &amp; lift kit</option>
-                <option>Mechanical service or repair</option>
-                <option>Auto-electrical / dual battery</option>
-                <option>Fabrication &amp; accessories</option>
-                <option>Fleet contract enquiry</option>
-                <option>Something else</option>
+              <label for="qf-location">WORKSHOP</label>
+              <select id="qf-location" name="location" required>
+                <option value="" selected disabled>Choose a workshop</option>
+                <option>Nairobi — Head Office</option>
+                <option>Mombasa — Coast</option>
+                <option>Arusha — Northern Circuit</option>
               </select>
               <p class="field-error" aria-live="polite"></p>
             </div>
           </div>
-
           <div class="form-field">
-            <label for="qf-message">What would you like done?</label>
+            <label for="qf-vehicle">VEHICLE (MAKE, MODEL, YEAR)</label>
+            <input id="qf-vehicle" name="vehicle" type="text" placeholder="e.g. Land Cruiser 79, 2021" required>
+            <p class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="form-field">
+            <label for="qf-message">MODEL, SYMPTOMS, AND PRIOR HISTORY</label>
             <textarea id="qf-message" name="message" rows="4" required></textarea>
             <p class="field-error" aria-live="polite"></p>
           </div>
-
-          <button class="btn btn-primary btn-lg btn-block" type="submit">Send Quote Request</button>
+          <button class="pill pill-solid pill-lg" type="submit">Request Work <span aria-hidden="true">&#8594;</span></button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-          <p class="form-note">
-            This demo form stores nothing. Wire it to Formspree, Getform or your own
-            endpoint — see README.md.
-          </p>
+          <p class="form-note">A submitted request is not a confirmed service date. This demo form stores nothing — see README.md to connect it.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
+  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
     <div class="container footer-grid">
-      <div class="footer-brand">
+      <div>
         <img src="./assets/img/logo.jpg" alt="Custom Cruisers East Africa Ltd" class="brand-logo">
-        <p>Builds, conversions and maintenance for the vehicles that keep East Africa moving.</p>
+        <p class="footer-tag">BUILDS, CONVERSIONS AND MAINTENANCE FOR THE VEHICLES THAT KEEP EAST AFRICA MOVING.</p>
       </div>
       <nav class="footer-col" aria-label="Quick links">
-        <h3>Quick links</h3>
+        <span class="footer-head">INDEX</span>
         <a href="#services">Services</a>
         <a href="#workshop">Workshop</a>
-        <a href="#testimonials">Reviews</a>
-        <a href="#coverage">Coverage</a>
-        <a href="#contact">Contact</a>
+        <a href="#models">Vehicle scope</a>
+        <a href="#locations">Workshops</a>
+        <a href="#request">Request work</a>
       </nav>
       <div class="footer-col">
-        <h3>Workshops</h3>
+        <span class="footer-head">WORKSHOPS</span>
         <p>Nairobi — Enterprise Road</p>
         <p>Mombasa — Shimanzi Road</p>
         <p>Arusha — Nairobi Road</p>
       </div>
       <div class="footer-col">
-        <h3>Follow us</h3>
-        <div class="social-row">
-          <!-- BRAND ASSET: point these at your real social profiles -->
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.7c0-.9.3-1.6 1.6-1.6h1.6V4.2c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.4-4 4.1v2.6H7.5V14h2.8v8h3.2z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg></a>
-          <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z"/><path d="M8.8 9.2c.3-.8.7-.8 1-.8h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3 0 .6.7 1.1 1.6 1.8 2.7 2.3.3.1.4 0 .6-.1l.7-.8c.2-.2.4-.2.6-.1l1.7.8c.3.1.4.3.4.5-.1.9-.8 1.6-1.6 1.7-1.5.2-5.2-1-6.9-4.6-.7-1.3-.6-2.3-.4-2.9z"/></svg></a>
-        </div>
+        <span class="footer-head">FOLLOW</span>
+        <!-- BRAND ASSET: point these at your real profiles -->
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">WhatsApp</a>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>© <span id="year">2026</span> Custom Cruisers East Africa Ltd. All rights reserved.</p>
-      <div class="legal-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
+      <p>&copy; <span id="year">2026</span> CUSTOM CRUISERS EAST AFRICA LTD</p>
+      <p>1.3167&deg; S / 36.8500&deg; E &mdash; NAIROBI, KENYA</p>
     </div>
   </footer>
 
